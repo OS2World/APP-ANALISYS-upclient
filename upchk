@@ -1,0 +1,64 @@
+#!/bin/sh
+#
+# Name    :  upchk
+# Version :  1.0
+# Desc    :  Check for running Uptime Client
+# License :  GPL
+# Author  :  Alex C. de Haas, bitbyte@atomicvoid.net
+#
+# This is a script suitable for use in a crontab.  It checks to make
+# sure your uptime client is running. If your upclient isn't found
+# running, it'll try to start it back up.
+#
+# You'll need to edit this script for your upclient.
+#
+# To check for your upclient every 12 hours, put the following line in
+# your crontab:
+#
+#    0 */12 * * *   /home/mydir/upchk
+#
+# And if you don't want to get email from crontab when it checks your
+# upclient, put the following in your crontab:
+#
+#    0 */12 * * *   /home/mydir/upchk >/dev/null 2>&1
+#
+
+# change this to the full path AND name of your upclient executable:
+upclient="/home/mydir/upclient"
+
+# change this to the name of your upclient's pidfile (as defined in
+# config.h of the upclient distribution)
+pidfile="/home/mydir/upclient.pid"
+
+########## you probably don't need to change anything below here ##########
+
+# is there a pid file?
+if test -r $pidfile
+then
+  # there is a pid file -- is it current?
+  pid=`cat $pidfile`
+  if `kill -CHLD $pid >/dev/null 2>&1`
+  then
+    # it's still going -- back out quietly
+    exit 0
+  fi
+
+  # Upclient executable available?
+  if test -x $upclient
+  then
+    # Upclient executable found, run it.
+    echo ""
+    echo "Didn't find Upclient running, restarting it now."
+    $upclient
+  else
+    # Couldn't find the Uptime client, bark at user!
+    echo ""
+    echo "Hey, I can't find your Uptime Client executable anywhere,"
+    echo "please check the configuration settings of this script."
+  fi
+else
+  # Couldn't find no pid file, take legal action against user
+  echo ""
+  echo "Hey, I can't find no pid file called $pidfile"
+  echo "please check the configuration settings of this script."
+fi

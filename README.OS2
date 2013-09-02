@@ -1,0 +1,23 @@
+This is my port of www.uptimes.net's upclient.
+
+To use, go to www.uptime.net and create an account.
+
+Then unzip upclient onto each of your machines.
+
+Add a host entry on the web page for each of your machines.
+
+Then on each machine edit the upc.cmd file to include your
+login and password information.  And edit the host id to
+be the number returned when you created that host on the 
+web page.
+
+Then add upc.cmd to your statup folder or startup.cmd.
+
+Whenever your computer is on it will send uptime information
+to uptime.net ever 2 minutes.  See how Warp stands up to the
+competition!
+
+Cya!
+
+Brian Smith
+dbsoft@technologist.com

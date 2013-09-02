@@ -1,0 +1,27 @@
+                          Upload Information Template for Hobbes.nmsu.edu
+                          ===============================================
+
+        Archive Filename: upclient2.zip 
+       Short Description: www.uptimes.net client release 2.
+        Long Description: (none)
+
+      Proposed directory
+           for placement: /pub/os2/apps/analysis
+
+               Your name: Brian Smith
+           Email address: dbsoft@technologist.com
+    Program contact name: (same)
+   Program contact email: (same)
+             Program URL: http://www.uptimes.net/ 
+
+      Would you like the
+   contact email address
+    included in listings? yes
+
+Operating System/Version: 
+ Additional requirements: Warp 3, TCP/IP, and EMX 0.9d
+
+                Replaces: upclient2.zip
+
+
+

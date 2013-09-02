@@ -1,0 +1,46 @@
+Uptime Client history
+---------------------
+
+4.09:
+  * Client was always sending version 4.01 as its version. fixed.
+
+4.08:
+  * hostid-provided-on-commandline bugfix(tm).
+
+4.07:
+  * Solaris support
+  * Some minor changes
+
+4.06:
+  * Rather dirty fix for Linux uptime wraparounds :-)
+  * Small changes & some restructuring of code.
+  * Removed redundant getstats() who would just call getstats<PLATFORM>().
+  * Ultrix support, by Simon Burge <simonb@thistledown.com.au>.
+  * *BSD loadavg support, by Simon Burge.
+  * Proxy support enhancements, by Simon Burge.
+
+4.05:
+  * Fixed compiler errors in Warren's *BSD code. (sorry dude :-)
+  * Fixed compiler errors in Warren's Linux code.
+  * Merged the UnixWare code from Warren Young's <tangent@mail.com> 4.04 version
+    into my v4.05.
+  * Fixed number of warnings.
+  * Fixed strtol() bug in main().
+
+4.04:
+  * The Host ID can be compiled in the executable, but can also be provided on
+    the commandline.
+  * Removed goto statement from Michael's patch: goto is bad coding!
+  * Fixed typos & some other things we like to do our way in the Michael's patch.
+  * Implemented the patch that Michael C. Richardson <mcr@sandelman.ottawa.on.ca>
+    send to us. Thank you, Michael!
+
+4.03:
+  * FreeBSD support.
+  * Addition of the upchk script.
+
+4.02:
+  * Added CPU ``autodetection'' and sending support.
+
+4.01:
+  * First release of the v4 upclient for Linux.

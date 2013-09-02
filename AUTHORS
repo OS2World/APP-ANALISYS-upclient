@@ -1,0 +1,27 @@
+Uptime Client's authors
+-----------------------
+
+Alex C. de Haas		alex@uptimes.net
+tgm			tgm@uptimes.net
+
+Note:
+Currently Alex develops the C client and tgm the
+server and website.
+
+
+Contributors
+------------
+
+We would like to thank the following people for their
+contributions (patches, etc.):
+
+* Michael C. Richardson <mcr@sandelman.ottawa.on.ca>
+  General patch.
+
+* Warren Young's <tangent@mail.com>
+  UnixWare code.
+
+* Simon Burge <simonb@thistledown.com.au>
+  Ultrix code.
+  *BSD loadavg support.
+  Proxy code enhancements.
