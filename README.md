@@ -14,6 +14,7 @@ COMPILE TOOLS
 
 AUTHORS
 ===============
+* Port: Brian Smith
 * Alex C. de Haas
 * tgm
 
